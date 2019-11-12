@@ -526,4 +526,19 @@ body {
     width: 100%;
   }
 }
+
+.smooth-transition-hide {
+  opacity: 0;
+  -webkit-transition: 1s all ease-in-out;
+  transition: 1s all ease-in-out;
+  -webkit-transform: translateY(50px);
+          transform: translateY(50px);
+}
+
+.smooth-appear {
+  opacity: 1;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  transform: translateY(0px);
+}
 /*# sourceMappingURL=home_style.css.map */

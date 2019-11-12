@@ -445,3 +445,16 @@ body{
         width: 100%;
     }
 }  
+
+// Smooth scrolling effect
+.smooth-transition-hide {
+    opacity: 0;
+    transition: 1s all ease-in-out;
+    transform: translateY(50px);
+}
+
+.smooth-appear {
+    opacity: 1;
+    transform: translateY(0px);
+    transform: translateY(0px);
+}

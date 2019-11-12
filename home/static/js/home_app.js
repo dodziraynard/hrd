@@ -48,6 +48,18 @@ document.addEventListener("scroll", ()=>{
     }
 })
 
+// Smooth scroll
+function scrollAppear(element) {
+    var element = document.querySelector(element);
+    var elementPos = element.getBoundingClientRect().top;
+    var screenPos = window.innerHeight / 1.2;
+
+    if (elementPos < screenPos) {
+        element.classList.add("smooth-appear");
+    } 
+}
+
+
 window.addEventListener("load", ()=>{
     // Toggling sidebar
     let menu = document.querySelector(".menu");
@@ -55,4 +67,72 @@ window.addEventListener("load", ()=>{
     burger.addEventListener("click", ()=>{
         menu.classList.toggle("toggle-sidebar");
     })
+    let about = document.querySelector(".about");
+    let services = document.querySelector(".services");
+    let portfolio = document.querySelector(".portfolio");
+    about.classList.add("smooth-transition-hide");
+    services.classList.add("smooth-transition-hide");
+    portfolio.classList.add("smooth-transition-hide");
+})
+
+// Apperance effect
+document.addEventListener("scroll", ()=>{
+    scrollAppear(".about");
+    scrollAppear(".services");
+    scrollAppear(".portfolio");
+})
+
+
+// Smooth scroll
+function smoothScroll(target, duration) {
+    var target = document.querySelector(target);
+    var targetPosition = target.getBoundingClientRect().top;
+    var startPosition = window.pageYOffset;
+    var distance = targetPosition - startPosition;
+    var startTime = null;
+
+    function animation(currentTime) {
+        if (startTime === null) startTime = currentTime;
+        var timeElapsed = currentTime - startTime;
+
+        var run = ease(timeElapsed, startPosition, distance, duration);
+        window.scrollTo(0, run);
+        if (timeElapsed < duration) requestAnimationFrame(animation)
+    }
+
+    function ease(t, b, c, d) {
+        t /= d / 2;
+        if (t < 1) return c / 2 * t * t + b;
+        t--;
+        return -c / 2 * (t * (t - 2) - 1) + b;
+    }
+    requestAnimationFrame(animation);
+}
+
+window.addEventListener("load", ()=>{
+    let home = document.querySelector("#home");
+    let about = document.querySelector("#about");
+    let services = document.querySelector("#services");
+    let portfolio = document.querySelector("#portfolio");
+    let contact = document.querySelector("#contact");
+
+    home.addEventListener("click", ()=>{
+        smoothScroll("body", 2000);
+    })  
+
+    about.addEventListener("click", () => {
+        smoothScroll(".about", 2000);
+    })  
+
+    services.addEventListener("click", () => {
+        smoothScroll(".services", 2000);
+    })  
+
+    portfolio.addEventListener("click", () => {
+        smoothScroll(".portfolio", 2000);
+    })  
+
+    contact.addEventListener("click", () => {
+        smoothScroll(".contacts", 2000);
+    })  
 })
