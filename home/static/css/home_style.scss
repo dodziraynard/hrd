@@ -1,0 +1,294 @@
+$red : #ff3547;
+
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin: 0;
+}
+body{
+    margin:0;
+    padding:0;
+}
+.row{
+     padding:0;
+     margin: 0;
+}
+// Custom scroll bar
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 1px;
+}
+
+::-webkit-scrollbar-thumb{
+    background: rgb(184, 184, 184);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background: $red;
+}
+
+//Animation
+.page-loading{
+    position:fixed;
+    height: 100px;
+    justify-content: center;
+    left: 40%;
+    transform: translateX(40%);
+    top: 50%;
+    display: flex;
+
+    [class*="anim-box"] {
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+        animation: .5s loading;
+        animation-direction: alternate-reverse;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes loading{
+    from{
+        background:red;
+        border-radius: 50%;
+        width: 0px;
+        height:0;
+    }
+    to{
+        background: rgb(255, 0, 170);
+         border-radius: 50%;
+         width: 20px;
+         height: 20px;
+    }
+}
+
+// Typing effect
+.typewrite::after {
+    content: "";
+    border-right: 3px solid white;
+    width: 1px;
+    height: 20px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+//Main page
+.main {
+    visibility: hidden;
+
+    .background{
+        background: no-repeat url("images/background.jpg");
+        background-size: cover;
+        width: 100%;
+        height: 100vh;
+
+        .content {
+            position: absolute;
+        }
+        .over-lay{
+            height: 100vh;
+            width: 100%;
+            position: absolute;
+            top:0;
+            background:rgba(0, 0, 0, .5);
+        }
+    }
+}
+
+.nav {
+    color: rgb(240, 240, 240);   
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 99.3vw;
+    position: fixed;
+    z-index: 5;
+    background: rgba(107, 104, 104, 0);
+    transition: 0.5 all ease-in-out;
+
+    .logo{
+        font-family: 'Charmonman', cursive;
+        font-weight: 600;
+        margin-right: 100px;
+        font-size: 1.3em;
+        margin-left: 20px;
+    }
+
+    .menu{
+        display: flex;
+        list-style-type: none;
+        position: absolute;
+        right: 50px;
+        
+        .menuitem{
+            margin-left: 50px;
+            font-weight: 600;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+
+        .menuitem:hover{
+            color: $red;
+            cursor: pointer;
+        }
+    }
+}
+
+.nav-fixed{
+    background: white;
+    box-shadow: 2px 0px 5px gray;
+    color: rgb(32, 32, 32) !important;
+    font-weight: 600;
+
+    .logo {
+       color: $red !important;
+    }
+     .menuitem:hover {
+         color: $red !important;
+         cursor: pointer;
+         border-top: 2px solid $red;
+         border-bottom: 2px solid $red;
+     }
+}
+
+.center-div{
+    position: absolute;
+    color: rgb(240,240,240);
+    text-align: center;
+    width:95vw;
+    top:100%;
+    transform: translateY(100%); 
+    justify-content: center;
+
+    #contact-me-btn{
+        font-size: 1.2em;
+        border-radius: 5px;
+    }
+}
+
+.right-align{
+    text-align: right;
+    line-height: 1.5em;
+}
+.outline-btn{
+    border: 2px solid $red;
+    border-radius: 5px;
+    padding: 5px;
+    background: white;
+    position: absolute;
+    right:15px;
+    transition: .5s all ease-in-out;
+    font-weight: 400;
+}
+
+.outline-btn:hover {
+    background: $red;
+    color: white;
+}
+.about{
+    height: 100vh;
+    padding: 100px 30px; 
+    .skill-item{
+        padding-top: 10px;
+    }
+    .skills {
+        width: 80%;
+        .percentage{
+            position: absolute;
+            right:20%;
+        }
+        .skill-level {
+            height: 5px;
+            width: 100%;
+            background: rgb(200, 200, 200);
+        }
+
+        .level-bar{
+            background: gray;
+            border-radius: 5px;
+             position: absolute;
+             height: 5px;
+        }
+        
+        .python-skill-level {
+            width: 60%;
+        }
+        .java-skill-level {
+            width: 47%;
+        }
+        .javascript-skill-level {
+            width: 50%;
+        }
+
+        .html-skill-level {
+            width: 70%;
+        }
+    }
+
+    #info{
+        margin: 5px;
+    }
+    #profile-image{
+        margin-top: 20px;
+    }
+}
+
+.section-header{
+    text-align: center;
+    .doublerec{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        border-top: 2px solid $red;
+        border-bottom: 2px solid $red;
+    }
+}
+.services{
+    height: 80vh;
+    background: rgb(240, 240, 240);
+    padding: 30px;
+    justify-content: center;
+    text-align: center;
+    .service{
+        padding: 5px;
+        transition: .5s all ease-in-out;
+    }
+    .service:hover{
+        span, h3{
+            color: $red;
+        }
+        span{
+            animation: 1s rot;
+        }
+    }
+}
+@keyframes rot{
+    from{
+        transform: rotate(0deg);
+    }
+    from {
+       transform: rotate(20deg);
+    }
+}
+.service-icon{
+    padding: 50px;
+    border-radius: 50%;
+    font-size: 3em;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>HRD</title>
+        <link href="https://fonts.googleapis.com/css?family=Charmonman|Nunito+Sans&display=swap" rel="stylesheet">
+        {% load static %}
+         <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
+         <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}" />
+         <link rel="stylesheet" type="text/css" href="{% static 'css/font-awesome.min.css' %}" />
+        <link rel="stylesheet" href="{% static 'css/home_style.css' %}">
+        <script src="{% static 'js/home_app.js' %}"></script>
+    </head>
+
+    <body>
+        <!-- Loading animation -->
+        <div class="page-loading">
+           <div class="anim-box1"></div>
+           <div class="anim-box2"></div>
+           <div class="anim-box3"></div>
+        </div>
+        
+        <!-- Main page content -->
+        <div class="main">
+            <div class="background">
+                <div class="over-lay"></div>
+
+                <div class="content">
+                    <nav class="nav">
+                        <div class="logo">
+                            HRD
+                        </div>
+                        <ul class="menu">
+                            <li class="menuitem">HOME</li>
+                            <li class="menuitem">ABOUT</li>
+                            <li class="menuitem">SERVICES</li>
+                            <li class="menuitem">PORFOLIO</li>
+                            <li class="menuitem">CONTACT</li>
+                        </ul>
+                    </nav>
+
+                    <div class="center-div">
+                        <h3>Hello, I'm Raynard Dodzi</h3>
+                        <h1>Skills: <span class="typewrite"></span> </h1>
+                        
+                        <button id="contact-me-btn" class="btn btn-danger">Contact Me</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about row">
+                <div id="info" class="col-md-4">
+                    <h1 class="right-align">H. Raynard Dodzi</h1>
+                    <h3 class="right-align">FULL STACK DEVELOPER</h3>
+                    <h4 class="right-align">I am a Full Stack Python-Django and Javascript Developer.
+                    I have knowledge in Python, Java, C & C++, html, css, JavaScript, Jquery, Sass, Git & Github, MySQL</h4>
+
+                    <button class="outline-btn right-align">
+                        Download CV <span class="fa fa-download"></span>
+                    </button>
+                </div>
+                <div id="profile-image" class="col-md-3"></div>
+                <div class="col-md-4">
+                    <h3>My Skills</h3>
+                    
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="title">
+                                <h4 class="skill">Python-Django
+                                    <span class="percentage">80%</span></h4>
+                            </div>
+                            <div class="python-skill-level level-bar"></div>
+                            <div class="skill-level"></div>                                                                                                    
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="title">
+                                <h4 class="skill">Java
+                                    <span class="percentage">67%</span></h4>
+                            </div>
+                            <div class="java-skill-level level-bar"></div>
+                            <div class="skill-level"></div>
+                        </div>
+
+                        <div class="skill-item">
+                             <div class="title">
+                                <h4 class="skill">JavaScript
+                                    <span class="percentage">70%</span></h4>
+                            </div>
+                            <div class="javascript-skill-level level-bar"></div>
+                            <div class="skill-level"></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="title">
+                            <h4 class="skill">HTML/CSS
+                                <span class="percentage">95%</span></h4>
+                            </div>
+                            <div class="html-skill-level level-bar"></div>
+                            <div class="skill-level"></div>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="services">
+                <h3 class='section-header'>Wh<span class="doublerec">at I off</span>er</h3>
+                <div class="row">
+                    <div class="service col-md-3">
+                        <span class="service-icon fa fa-code"></span>
+                        <h3>Web Development</h3> 
+                        <h5>I design and develop scalable and modern
+                            websites and web-applications using python-django and javascript.
+                        </h5>
+                    </div>
+                    <div class="service col-md-3">
+                        <span class="service-icon fa fa-mobile"></span>
+                        <h3>Android Development</h3>
+                        <h5>As Android is the most popular mobile OS, I develop android apps to help business
+                            and individuals.
+                        </h5>
+                    </div>
+                    <div class="service col-md-3">
+                        <span class="service-icon fa fa-edit"></span>
+                        <h3>Graphic Design</h3>
+                        <h5>I also incorporate graphic design into my works using Adobe Photoshop and Adobe XD for protyping</h5>
+                    </div>
+
+                    <div class="service col-md-3">
+                        <span class="service-icon fa fa-tasks"></span>
+                        <h3>MS Office Suit</h3>
+                        <h5>I am also well vest with the use of Microsoft Office Tools like Ms Word, Excel, Powerpoint and Publisher </h5>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio">
+                <h3 class='section-header'>Wh<span class="doublerec">at I am</span> Doing</h3>
+            </div>
+        </div>
+
+
+        {% load static %}
+        <script defer src="{% static 'js/jquery-1.10.2.min.js' %}"></script>
+        <script defer src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script defer src="{% static 'js/particles.js' %}"></script>
+        <script defer src="{% static 'js/particles.min.js' %}"></script>
+    </body>
+</html>
