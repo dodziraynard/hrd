@@ -6,8 +6,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="">
         <meta name="author" content="">
-        <title>HRD</title>
-        <link href="https://fonts.googleapis.com/css?family=Charmonman|Nunito+Sans&display=swap" rel="stylesheet">
+        <title>HRD | Portofolio</title>
+        <!-- <link href="https://fonts.googleapis.com/css?family=Charmonman|Nunito+Sans&display=swap" rel="stylesheet"> -->
         {% load static %}
          <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
          <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}" />
@@ -34,13 +34,19 @@
                         <div class="logo">
                             HRD
                         </div>
-                        <ul class="menu">
+                        <ul class="toggle-sidebar menu">
                             <li class="menuitem">HOME</li>
                             <li class="menuitem">ABOUT</li>
                             <li class="menuitem">SERVICES</li>
                             <li class="menuitem">PORFOLIO</li>
                             <li class="menuitem">CONTACT</li>
                         </ul>
+
+                        <div class="burger">
+                            <div class="line1"></div>
+                            <div class="line2"></div>
+                            <div class="line3"></div>
+                        </div>
                     </nav>
 
                     <div class="center-div">
@@ -52,6 +58,7 @@
                 </div>
             </div>
 
+            <!-- About -->
             <div class="about row">
                 <div id="info" class="col-md-4">
                     <h1 class="right-align">H. Raynard Dodzi</h1>
@@ -107,6 +114,7 @@
                 </div>
             </div>
 
+            <!-- Services -->
             <div class="services">
                 <h3 class='section-header'>Wh<span class="doublerec">at I off</span>er</h3>
                 <div class="row">
@@ -138,9 +146,72 @@
                 </div>
             </div>
 
+            <!-- Portofolio -->
             <div class="portfolio">
                 <h3 class='section-header'>Wh<span class="doublerec">at I am</span> Doing</h3>
+
+                <div class="projects row">
+                    <div class="col-md-5 project">
+                        <h3>School Management System</h3>
+                        <div class="project-image">
+
+                        </div>
+                    </div>
+
+                    <div class="col-md-5 project">
+                        <h3>Phonetic Master</h3>
+                        <div class="project-image">
+                        
+                        </div>                                                              
+                    </div>
+
+                </div>
             </div>
+
+            <!-- Contact -->
+            <div class="contacts">
+                <h3 class='section-header'>C<span class="doublerec">ontac</span>t</h3>
+                <div class="row">
+                    <div class="card col-md-3">
+                        <h2><span class="fa fa-phone themed-text "></span></h2>
+                        <h4>PHONE:</h4>
+                        <h5>(+233)249 626 071</h5>
+                    </div>
+
+                    <div class="card col-md-4">
+                        <h2><span class="fa  fa-envelope themed-text"></span></h2>
+                        <h4>EMAIL:</h4>
+                        <h5>dodzireynard@gmail.com</h5>
+                    </div>
+
+                    <div class="card col-md-3">
+                        <h2><span class="fa  fa-envelope themed-text"></span></h2>
+                        <h4>SOCIAL MEDIA:</h4>
+                        <div class="row">
+                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="" class="fa fa-linkedin"></a></div>
+                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="" class="fa fa-facebook"></a></div>
+                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="" class="fa fa-github"></a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message">
+                    <form action="#" class="form">
+                        <div class="user-id">
+                            <input type="text" required class="custom-input" placeholder="Full Name *">
+                            <input type="email" required class="custom-input" placeholder="Email Address *">
+                        </div>
+
+                        <textarea class="form from-control" name="" id="" cols="30" rows="10" placeholder="Your message *"
+                        required></textarea>
+                        <button type="submit" class="btn btn-danger">SEND MESSAGE</button>
+                    </form>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <p>2019 &copy All Right Reserved By HRD</p>
+            </footer>
         </div>
 
 

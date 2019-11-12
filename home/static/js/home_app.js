@@ -47,3 +47,12 @@ document.addEventListener("scroll", ()=>{
         nav.classList.remove("nav-fixed");
     }
 })
+
+window.addEventListener("load", ()=>{
+    // Toggling sidebar
+    let menu = document.querySelector(".menu");
+    let burger = document.querySelector(".burger");
+    burger.addEventListener("click", ()=>{
+        menu.classList.toggle("toggle-sidebar");
+    })
+})
