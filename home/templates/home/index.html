@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <title>HRD | Portofolio</title>
-        <link href="https://fonts.googleapis.com/css?family=Charmonman|Nunito+Sans&display=swap" rel="stylesheet">
+        <!-- <link href="https://fonts.googleapis.com/css?family=Charmonman|Nunito+Sans&display=swap" rel="stylesheet"> -->
         {% load static %}
          <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.min.css' %}" />
          <link rel="stylesheet" type="text/css" href="{% static 'css/mdb.min.css' %}" />
@@ -32,7 +32,7 @@
                 <div class="content">
                     <nav class="nav">
                         <div class="logo">
-                            HRD
+                            <a href="/">HRD</a>
                         </div>
                         <ul class="toggle-sidebar menu">
                             <li id="home" class="menuitem">HOME</li>
@@ -50,7 +50,7 @@
                     </nav>
 
                     <div class="center-div">
-                        <h3>Hello, I'm Raynard Dodzi</h3>
+                        <h2>Hello, I'm Raynard Dodzi</h2>
                         <h1>Skills: <span class="typewrite"></span> </h1>
                         
                         <button id="contact-me-btn" class="btn btn-danger">Contact Me</button>
@@ -70,7 +70,10 @@
                         Download CV <span class="fa fa-download"></span>
                     </button>
                 </div>
-                <div id="profile-image" class="col-md-3"></div>
+                <div id="profile-image" class="col-md-3">
+                    <img src="/media/pic.jpg" alt="" class="my-pic">
+                </div>
+
                 <div class="col-md-4">
                     <h3>My Skills</h3>
                     
@@ -116,7 +119,7 @@
 
             <!-- Services -->
             <div class="services">
-                <h3 class='section-header'>Wh<span class="doublerec">at I off</span>er</h3>
+                <h3 class='section-header'>WH<span class="doublerec">AT I OFF</span>ER</h3>
                 <div class="row">
                     <div class="service col-md-3">
                         <span class="service-icon fa fa-code"></span>
@@ -148,20 +151,24 @@
 
             <!-- Portofolio -->
             <div class="portfolio">
-                <h3 class='section-header'>Wh<span class="doublerec">at I am</span> Doing</h3>
+                <h3 class='section-header'>WH<span class="doublerec">AT I'M DOI</span>NG</h3>
 
                 <div class="projects row">
                     <div class="col-md-5 project">
                         <h3>School Management System</h3>
                         <div class="project-image">
-
+                            <img src="/media/sms.png">
+                            <h4>This is an online school management system 
+                                project that I built with python-django stack.</h4>
+                            <a title="USE 'admin' as password and username" href="https://hrdsms.pythonanywhere.com/dashboard">View Demo</a>
                         </div>
                     </div>
 
                     <div class="col-md-5 project">
                         <h3>Phonetic Master</h3>
-                        <div class="project-image">
-                        
+                        <div class="project-image-p">
+                            <img src="/media/pm.png">
+                            <h4>A very simple android app that helps students learn British English sounds</h4>
                         </div>                                                              
                     </div>
 
@@ -170,7 +177,7 @@
 
             <!-- Contact -->
             <div class="contacts">
-                <h3 class='section-header'>C<span class="doublerec">ontac</span>t</h3>
+                <h3 class='section-header'>C<span class="doublerec">ONTAC</span>T</h3>
                 <div class="row">
                     <div class="card col-md-3">
                         <h2><span class="fa fa-phone themed-text "></span></h2>
@@ -188,21 +195,22 @@
                         <h2><span class="fa  fa-envelope themed-text"></span></h2>
                         <h4>SOCIAL MEDIA:</h4>
                         <div class="row">
-                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="" class="fa fa-linkedin"></a></div>
-                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="" class="fa fa-facebook"></a></div>
-                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="" class="fa fa-github"></a></div>
+                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="https://www.linkedin.com/in/raynard-helegah-a46a17169/" class="fa fa-linkedin"></a></div>
+                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="https://m.facebook.com/bismark.hekegah" class="fa fa-facebook"></a></div>
+                            <div class="col-md-4 col-xs-4 col-sm-4"><a href="https://github.com/dodziraynard" class="fa fa-github"></a></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="message">
-                    <form action="#" class="form">
+                    <form action="{% url 'home:message' %}" method="POST" class="form">
+                        {% csrf_token %}
                         <div class="user-id">
-                            <input type="text" required class="custom-input" placeholder="Full Name *">
-                            <input type="email" required class="custom-input" placeholder="Email Address *">
+                            <input type="text"  name="name" required class="custom-input" placeholder="Full Name *">
+                            <input type="email" name="email" required class="custom-input" placeholder="Email Address *">
                         </div>
 
-                        <textarea class="form from-control" name="" id="" cols="30" rows="10" placeholder="Your message *"
+                        <textarea class="form from-control" name="message" id="" cols="30" rows="10" placeholder="Your message *"
                         required></textarea>
                         <button type="submit" class="btn btn-danger">SEND MESSAGE</button>
                     </form>

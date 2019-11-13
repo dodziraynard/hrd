@@ -7,6 +7,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  font-family: 'Nunito',sans-serif;
 }
 
 body {
@@ -174,12 +175,14 @@ body {
   transition: 0.5 all ease-in-out;
 }
 
-.nav .logo {
+.nav .logo a {
   font-family: 'Charmonman', cursive;
   font-weight: 600;
   margin-right: 100px;
   font-size: 1.3em;
   margin-left: 20px;
+  text-decoration: none;
+  color: white;
 }
 
 .nav .menu {
@@ -211,7 +214,7 @@ body {
   font-weight: 600;
 }
 
-.nav-fixed .logo {
+.nav-fixed .logo a {
   color: #ff3547 !important;
 }
 
@@ -236,6 +239,7 @@ body {
 }
 
 .center-div #contact-me-btn {
+  margin-top: 100px;
   font-size: 1.2em;
   border-radius: 5px;
 }
@@ -265,6 +269,15 @@ body {
 .about {
   min-height: 100vh;
   padding: 100px 30px;
+}
+
+.about .info {
+  margin-bottom: 30px;
+}
+
+.about .my-pic {
+  width: 90%;
+  margin: 10px;
 }
 
 .about .skill-item {
@@ -311,10 +324,6 @@ body {
 
 .about #info {
   margin: 5px;
-}
-
-.about #profile-image {
-  margin-top: 20px;
 }
 
 .section-header {
@@ -376,7 +385,7 @@ body {
 }
 
 .service-icon {
-  padding: 50px;
+  padding: 20px;
   border-radius: 50%;
   font-size: 3em;
 }
@@ -384,7 +393,6 @@ body {
 .portfolio {
   margin-top: 100px;
   margin-bottom: 50px;
-  min-height: 80vh;
 }
 
 .portfolio .projects {
@@ -396,7 +404,17 @@ body {
 
 .portfolio .project {
   text-align: center;
-  margin: 10px;
+  margin: 30px;
+  border: 1px solid gray;
+}
+
+.portfolio .project-image img {
+  width: 100%;
+  margin-top: -10px;
+}
+
+.portfolio .project-image-p img {
+  width: 60%;
 }
 
 .themed-text {
@@ -524,6 +542,9 @@ body {
   .custom-input,
   .custom-input:focus {
     width: 100%;
+  }
+  #profile-image {
+    margin-top: 50px;
   }
 }
 
