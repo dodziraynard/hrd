@@ -267,7 +267,7 @@ body {
 }
 
 .about {
-  min-height: 100vh;
+  min-height: 90vh;
   padding: 100px 30px;
 }
 
@@ -278,6 +278,9 @@ body {
 .about .my-pic {
   width: 90%;
   margin: 10px;
+  -webkit-box-shadow: 2px 2px 5px gray;
+          box-shadow: 2px 2px 5px gray;
+  border-radius: 5px;
 }
 
 .about .skill-item {
