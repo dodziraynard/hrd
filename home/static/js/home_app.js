@@ -88,14 +88,14 @@ function smoothScroll(target, duration) {
     var target = document.querySelector(target);
     var targetPosition = target.getBoundingClientRect().top;
     var startPosition = window.pageYOffset;
-    var distance = targetPosition - startPosition;
+    // var distance = targetPosition - startPosition;
     var startTime = null;
 
     function animation(currentTime) {
         if (startTime === null) startTime = currentTime;
         var timeElapsed = currentTime - startTime;
 
-        var run = ease(timeElapsed, startPosition, distance, duration);
+        var run = ease(timeElapsed, startPosition, targetPosition - 90, duration);
         window.scrollTo(0, run);
         if (timeElapsed < duration) requestAnimationFrame(animation)
     }
@@ -110,29 +110,33 @@ function smoothScroll(target, duration) {
 }
 
 window.addEventListener("load", ()=>{
-    let home = document.querySelector("#home");
-    let about = document.querySelector("#about");
-    let services = document.querySelector("#services");
-    let portfolio = document.querySelector("#portfolio");
-    let contact = document.querySelector("#contact");
-
+    var home = document.querySelector("#home");
+    var about = document.querySelector("#about");
+    var services = document.querySelector("#services");
+    var portfolio = document.querySelector("#portfolio");
+    var contact = document.querySelector("#contact");
+    var contactBtn = document.querySelector("#contact-me-btn")
     home.addEventListener("click", ()=>{
-        smoothScroll("body", 2000);
+        smoothScroll("body", 1000);
     })  
 
-    about.addEventListener("click", () => {
-        smoothScroll(".about", 2000);
+    about.addEventListener("click", ()=> {
+        smoothScroll(".about", 1000);
     })  
 
-    services.addEventListener("click", () => {
-        smoothScroll(".services", 2000);
+    services.addEventListener("click", ()=> {
+        smoothScroll(".services", 1000);
     })  
 
-    portfolio.addEventListener("click", () => {
-        smoothScroll(".portfolio", 2000);
+    portfolio.addEventListener("click", ()=> {
+        smoothScroll(".portfolio", 1000);
     })  
 
-    contact.addEventListener("click", () => {
-        smoothScroll(".contacts", 2000);
-    })  
+    contact.addEventListener("click", ()=> {
+        smoothScroll(".contacts", 1000);
+    }) 
+    
+    contactBtn.addEventListener("click", () => {
+        smoothScroll(".contacts", 1000);
+    })
 })
