@@ -124,3 +124,15 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Sendgrid settings
+
+SEND_GRID_API_KEY = "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"
+EMAIL_HOST = "smtp.sendgrid.net"
+EMAIL_HOST_USER = "dodziraynard"
+EMAIL_HOST_PASSWORD = "dodzi@1504"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = 'dodzireynard@gmail.com'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = "Hello"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
