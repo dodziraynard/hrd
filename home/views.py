@@ -20,7 +20,7 @@ def message(request):
 def sendEmail(name, email, message):
     subject = "Mail from HRD Portfolio Website"
     from_email = settings.DEFAULT_FROM_EMAIL
-    to_email = [settings.DEFAULT_FROM_EMAIL]
+    to_email = "dodzireynard@gmail.com"
 
 
     send_mail(subject, message + " --- {}".format(name), email,
