@@ -1,5 +1,5 @@
 import os
-from decouple import config
+from . import local_settings
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -11,7 +11,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = ')n)8h&2_ds(d%m^=6c0uk2#)(wj#+n931ud04kxgtoh!$k2%a^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config("DEBUG", cast=bool)
+DEBUG = local_settings.DEBUG
 
 ALLOWED_HOSTS = ["*"]
 
@@ -113,12 +113,12 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SEND_GRID_API_KEY =config("SEND_GRID_API_KEY")
-EMAIL_HOST =config("EMAIL_HOST")
-EMAIL_HOST_USER =config("EMAIL_HOST_USER")
-EMAIL_HOST_PASSWORD =config("EMAIL_HOST_PASSWORD")
-EMAIL_PORT =config("EMAIL_PORT", cast=int)
-EMAIL_USE_TLS =config("EMAIL_USE_TLS", cast=bool)
-DEFAULT_FROM_EMAIL =config("DEFAULT_FROM_EMAIL")
-ACCOUNT_EMAIL_SUBJECT_PREFIX =config("ACCOUNT_EMAIL_SUBJECT_PREFIX")
-EMAIL_BACKEND =config("EMAIL_BACKEND")
+SEND_GRID_API_KEY =local_settings.SEND_GRID_API_KEY
+EMAIL_HOST =local_settings.EMAIL_HOST
+EMAIL_HOST_USER =local_settings.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD =local_settings.EMAIL_HOST_PASSWORD
+EMAIL_PORT =local_settings.EMAIL_PORT
+EMAIL_USE_TLS =local_settings.EMAIL_USE_TLS
+DEFAULT_FROM_EMAIL =local_settings.DEFAULT_FROM_EMAIL
+ACCOUNT_EMAIL_SUBJECT_PREFIX =local_settings.ACCOUNT_EMAIL_SUBJECT_PREFIX
+EMAIL_BACKEND =local_settings.EMAIL_BACKEND
