@@ -5,7 +5,7 @@ function showPage() {
     document.querySelector(".main").style.visibility = "visible";
 
     //Typing effect
-    const texts = ["  Python.            ", "  Django.            ", "  Git.            ", "  Javascript.            ", "  Sass.            "]
+    const texts = ["  Python.            ", "  Django.            ", "  Mobile Dev.           ", "  Git.            ", "  Javascript.            ", "  Sass.            "]
     let count = 0;
     let index = 0;
     let currentText = "";
@@ -56,7 +56,7 @@ function scrollAppear(element) {
 
     if (elementPos < screenPos) {
         element.classList.add("smooth-appear");
-    } 
+    } else { element.classList.remove("smooth-appear");}
 }
 
 

@@ -10,6 +10,11 @@
   font-family: 'Nunito',sans-serif;
 }
 
+a, a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -199,11 +204,14 @@ body {
   font-weight: 600;
   padding-top: 8px;
   padding-bottom: 8px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
 
 .nav .menu .menuitem:hover {
   color: #ff3547;
   cursor: pointer;
+  margin-top: 10px;
 }
 
 .nav-fixed {
@@ -303,14 +311,24 @@ body {
 }
 
 .about .skills .level-bar {
-  background: gray;
+  background: #ff3547;
   border-radius: 5px;
   position: absolute;
   height: 5px;
 }
 
+.about .skills [class*="-skill-level"] {
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  width: 0px;
+}
+
 .about .skills .python-skill-level {
   width: 60%;
+}
+
+.about .skills .c-skill-level {
+  width: 50%;
 }
 
 .about .skills .java-skill-level {
@@ -352,6 +370,9 @@ body {
 
 .services .service {
   padding: 5px;
+}
+
+.services .service h3 {
   -webkit-transition: .5s all ease-in-out;
   transition: .5s all ease-in-out;
 }
@@ -409,6 +430,13 @@ body {
   text-align: center;
   margin: 30px;
   border: 1px solid gray;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.portfolio .project:hover {
+  -webkit-box-shadow: 10px 10px 50px #ffbebe;
+          box-shadow: 10px 10px 50px #ffbebe;
 }
 
 .portfolio .project-image img {

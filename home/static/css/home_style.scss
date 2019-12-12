@@ -7,6 +7,10 @@ $red : #ff3547;
     user-select: none;
     font-family: 'Nunito',sans-serif;
 }
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}
 body{
     margin:0;
     padding:0;
@@ -159,11 +163,13 @@ body{
             font-weight: 600;
             padding-top: 8px;
             padding-bottom: 8px;
+            transition: all .5s;
         }
 
         .menuitem:hover{
             color: $red;
             cursor: pointer;
+            margin-top: 10px;
         }
     }
 }
@@ -254,14 +260,21 @@ body{
         }
 
         .level-bar{
-            background: gray;
+            background: $red;
             border-radius: 5px;
              position: absolute;
              height: 5px;
         }
         
+        [class*="-skill-level"]{
+            transition: all .5s ease-in-out;
+            width: 0px;
+        }
         .python-skill-level {
             width: 60%;
+        }
+        .c-skill-level {
+            width: 50%;
         }
         .java-skill-level {
             width: 47%;
@@ -298,7 +311,10 @@ body{
 
     .service{
         padding: 5px;
-        transition: .5s all ease-in-out;
+
+        h3{
+            transition: .5s all ease-in-out;
+        }
     }
     .service:hover{
         span, h3{
@@ -336,8 +352,12 @@ body{
         text-align: center;
         margin: 30px;
         border: 1px solid gray;
+        transition: all .5s ease-in-out;
     }
 
+    .project:hover{
+        box-shadow: 10px 10px 50px #ffbebe;
+    }
     .project-image{
         img{
             width: 100%;
