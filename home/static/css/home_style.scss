@@ -4,7 +4,7 @@ $red : #ff3547;
     box-sizing: border-box;
     padding:0;
     margin: 0;
-    user-select: none;
+    // user-select: none;
     font-family: 'Nunito',sans-serif;
 }
 a, a:hover{
@@ -271,20 +271,20 @@ body{
             width: 0px;
         }
         .python-skill-level {
-            width: 60%;
+            width: 70%;
         }
         .c-skill-level {
             width: 50%;
         }
         .java-skill-level {
-            width: 47%;
+            width: 65%;
         }
         .javascript-skill-level {
-            width: 50%;
+            width: 65%;
         }
 
         .html-skill-level {
-            width: 70%;
+            width: 73%;
         }
     }
 
@@ -310,8 +310,7 @@ body{
     text-align: center;
 
     .service{
-        padding: 5px;
-
+        padding: 5px;        
         h3{
             transition: .5s all ease-in-out;
         }
@@ -337,7 +336,6 @@ body{
     padding: 20px;
     border-radius: 50%;
     font-size: 3em;
-
 }
 
 .portfolio {
@@ -356,7 +354,7 @@ body{
     }
 
     .project:hover{
-        box-shadow: 10px 10px 50px #ffbebe;
+        box-shadow: 0px 0px 50px #ffbebe85;
     }
     .project-image{
         img{

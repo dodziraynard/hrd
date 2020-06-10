@@ -23,5 +23,5 @@ def sendEmail(name, email, message):
     to_email = "dodzireynard@gmail.com"
 
 
-    send_mail(subject, message + " --- {}".format(name), email,
-               to_email, fail_silently=False)
+    # send_mail(subject, message + " --- {}".format(name), email,
+    #            to_email, fail_silently=False)

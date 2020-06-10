@@ -3,10 +3,6 @@
           box-sizing: border-box;
   padding: 0;
   margin: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
   font-family: 'Nunito',sans-serif;
 }
 
@@ -324,7 +320,7 @@ body {
 }
 
 .about .skills .python-skill-level {
-  width: 60%;
+  width: 70%;
 }
 
 .about .skills .c-skill-level {
@@ -332,15 +328,15 @@ body {
 }
 
 .about .skills .java-skill-level {
-  width: 47%;
+  width: 65%;
 }
 
 .about .skills .javascript-skill-level {
-  width: 50%;
+  width: 65%;
 }
 
 .about .skills .html-skill-level {
-  width: 70%;
+  width: 73%;
 }
 
 .about #info {
@@ -435,8 +431,8 @@ body {
 }
 
 .portfolio .project:hover {
-  -webkit-box-shadow: 10px 10px 50px #ffbebe;
-          box-shadow: 10px 10px 50px #ffbebe;
+  -webkit-box-shadow: 0px 0px 50px #ffbebe85;
+          box-shadow: 0px 0px 50px #ffbebe85;
 }
 
 .portfolio .project-image img {
