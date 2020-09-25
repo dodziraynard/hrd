@@ -6,6 +6,7 @@ import GitHubIcon from "@material-ui/icons/GitHub";
 import VisibilityIcon from "@material-ui/icons/Visibility";
 import DescriptionIcon from "@material-ui/icons/Description";
 import Header from "./Header";
+import { Link } from "react-router-dom";
 
 const Div = styled("div")`
   background: ${({ theme }) => theme.cardBackground};
@@ -103,44 +104,42 @@ const Portfolio = () => {
       <Header text={"Portfolio"}></Header>
       <Body>
         {projects.map((project) => (
-          <a href={`/details/${project.id}`}>
-            <Project
-              key={project.id}
-              style={{ backgroundImage: `url(${project.icon})` }}
-            >
-              <div>
-                <h3>{project.name}</h3>
-                <ProjectActions>
-                  <a href={`/details/${project.id}`}>
-                    <DescriptionIcon></DescriptionIcon>
+          <Project
+            key={project.id}
+            style={{ backgroundImage: `url(${project.icon})` }}
+          >
+            <div>
+              <h3>{project.name}</h3>
+              <ProjectActions>
+                <Link to={`/details/${project.id}`}>
+                  <DescriptionIcon></DescriptionIcon>
+                </Link>
+                {project.git_link != null ? (
+                  <a
+                    href={project.git_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <GitHubIcon></GitHubIcon>
                   </a>
-                  {project.git_link != null ? (
-                    <a
-                      href={project.git_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <GitHubIcon></GitHubIcon>
-                    </a>
-                  ) : (
-                    ""
-                  )}
+                ) : (
+                  ""
+                )}
 
-                  {project.live_link != null ? (
-                    <a
-                      href={project.live_link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <VisibilityIcon></VisibilityIcon>
-                    </a>
-                  ) : (
-                    ""
-                  )}
-                </ProjectActions>
-              </div>
-            </Project>
-          </a>
+                {project.live_link != null ? (
+                  <a
+                    href={project.live_link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <VisibilityIcon></VisibilityIcon>
+                  </a>
+                ) : (
+                  ""
+                )}
+              </ProjectActions>
+            </div>
+          </Project>
         ))}
       </Body>
     </Div>
