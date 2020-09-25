@@ -36,6 +36,8 @@ def message(request):
             "Message from portfolio website", text_content, settings.DEFAULT_FROM_EMAIL, [settings.DEFAULT_TO_EMAIL])
 
         email.attach_alternative(html_content, "text/html")
-        email.send()
-
+        try:
+            email.send()
+        except Exception as e:
+            print(e)
     return redirect("portfolio:index")
