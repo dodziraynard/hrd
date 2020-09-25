@@ -74,10 +74,6 @@ const Images = styled("div")`
     margin: 20px;
     transition: all 0.2s ease-in-out;
     z-index: 100;
-
-    &:hover {
-      transform: scale(2);
-    }
   }
 `;
 
