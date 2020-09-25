@@ -122,7 +122,6 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SEND_GRID_API_KEY = local_settings.SEND_GRID_API_KEY
 EMAIL_HOST = local_settings.EMAIL_HOST
 EMAIL_HOST_USER = local_settings.EMAIL_HOST_USER
 EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
@@ -131,6 +130,7 @@ EMAIL_USE_TLS = local_settings.EMAIL_USE_TLS
 DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
 ACCOUNT_EMAIL_SUBJECT_PREFIX = local_settings.ACCOUNT_EMAIL_SUBJECT_PREFIX
 EMAIL_BACKEND = local_settings.EMAIL_BACKEND
+DEFAULT_TO_EMAIL = local_settings.DEFAULT_TO_EMAIL
 
 CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/uploads/images')
 
