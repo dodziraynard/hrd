@@ -37,10 +37,10 @@ function showPage() {
 }
 
 // Changing navbar class
-document.addEventListener("scroll", ()=>{
+document.addEventListener("scroll", () => {
     let about = document.querySelector(".about").getBoundingClientRect().top;
     let nav = document.querySelector(".nav")
-    let screenPos = window.innerHeight/2;
+    let screenPos = window.innerHeight / 2;
     if (about < screenPos) {
         nav.classList.add("nav-fixed");
     } else {
@@ -56,15 +56,15 @@ function scrollAppear(element) {
 
     if (elementPos < screenPos) {
         element.classList.add("smooth-appear");
-    } else { element.classList.remove("smooth-appear");}
+    } else { element.classList.remove("smooth-appear"); }
 }
 
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
     // Toggling sidebar
     let menu = document.querySelector(".menu");
     let burger = document.querySelector(".burger");
-    burger.addEventListener("click", ()=>{
+    burger.addEventListener("click", () => {
         menu.classList.toggle("toggle-sidebar");
     })
     let about = document.querySelector(".about");
@@ -76,7 +76,7 @@ window.addEventListener("load", ()=>{
 })
 
 // Apperance effect
-document.addEventListener("scroll", ()=>{
+document.addEventListener("scroll", () => {
     scrollAppear(".about");
     scrollAppear(".services");
     scrollAppear(".portfolio");
@@ -109,33 +109,33 @@ function smoothScroll(target, duration) {
     requestAnimationFrame(animation);
 }
 
-window.addEventListener("load", ()=>{
+window.addEventListener("load", () => {
     var home = document.querySelector("#home");
     var about = document.querySelector("#about");
     var services = document.querySelector("#services");
     var portfolio = document.querySelector("#portfolio");
     var contact = document.querySelector("#contact");
     var contactBtn = document.querySelector("#contact-me-btn")
-    home.addEventListener("click", ()=>{
+    home.addEventListener("click", () => {
         smoothScroll("body", 1000);
-    })  
+    })
 
-    about.addEventListener("click", ()=> {
+    about.addEventListener("click", () => {
         smoothScroll(".about", 1000);
-    })  
+    })
 
-    services.addEventListener("click", ()=> {
+    services.addEventListener("click", () => {
         smoothScroll(".services", 1000);
-    })  
+    })
 
-    portfolio.addEventListener("click", ()=> {
+    portfolio.addEventListener("click", () => {
         smoothScroll(".portfolio", 1000);
-    })  
+    })
 
-    contact.addEventListener("click", ()=> {
+    contact.addEventListener("click", () => {
         smoothScroll(".contacts", 1000);
-    }) 
-    
+    })
+
     contactBtn.addEventListener("click", () => {
         smoothScroll(".contacts", 1000);
     })

@@ -12,8 +12,7 @@ SECRET_KEY = ')n)8h&2_ds(d%m^=6c0uk2#)(wj#+n931ud04kxgtoh!$k2%a^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = local_settings.DEBUG
-
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = local_settings.ALLOWED_HOSTS
 
 
 # Application definition
@@ -25,13 +24,23 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
+    'rest_framework',
 
     'home',
+    'portfolio'
+]
+
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:3000',
+    'http://localhost:8000',
+    'http://localhost:8080',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -44,7 +53,7 @@ ROOT_URLCONF = 'hrd.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'frontend', 'portfolio', 'build'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -113,12 +122,18 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
 
-SEND_GRID_API_KEY =local_settings.SEND_GRID_API_KEY
-EMAIL_HOST =local_settings.EMAIL_HOST
-EMAIL_HOST_USER =local_settings.EMAIL_HOST_USER
-EMAIL_HOST_PASSWORD =local_settings.EMAIL_HOST_PASSWORD
-EMAIL_PORT =local_settings.EMAIL_PORT
-EMAIL_USE_TLS =local_settings.EMAIL_USE_TLS
-DEFAULT_FROM_EMAIL =local_settings.DEFAULT_FROM_EMAIL
-ACCOUNT_EMAIL_SUBJECT_PREFIX =local_settings.ACCOUNT_EMAIL_SUBJECT_PREFIX
-EMAIL_BACKEND =local_settings.EMAIL_BACKEND
+SEND_GRID_API_KEY = local_settings.SEND_GRID_API_KEY
+EMAIL_HOST = local_settings.EMAIL_HOST
+EMAIL_HOST_USER = local_settings.EMAIL_HOST_USER
+EMAIL_HOST_PASSWORD = local_settings.EMAIL_HOST_PASSWORD
+EMAIL_PORT = local_settings.EMAIL_PORT
+EMAIL_USE_TLS = local_settings.EMAIL_USE_TLS
+DEFAULT_FROM_EMAIL = local_settings.DEFAULT_FROM_EMAIL
+ACCOUNT_EMAIL_SUBJECT_PREFIX = local_settings.ACCOUNT_EMAIL_SUBJECT_PREFIX
+EMAIL_BACKEND = local_settings.EMAIL_BACKEND
+
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'media/uploads/images')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'frontend', 'portfolio', "build", "static"),
+)

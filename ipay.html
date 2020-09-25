@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPA API DEMO</title>
+</head>
+<body>
+    <h1>IPAY DEMO API</h1>
+
+    <form action="https://manage.ipaygh.com/gateway/checkout" method="post">
+      <input type="hidden" name="merchant_key"  value="tk_9d2f70ec-d2a3-11ea-b377-f23c9170642f">
+      <input type="hidden" name="success_url"  value="https://hrd.pythonanywhere.com?status=success">
+      <input type="hidden" name="cancelled_url" value="https://hrd.pythonanywhere.com?status=failed">    
+      <input type="hidden" name="ipn_url"  value="https://hrd.pythonanywhere.com">
+      <input type="hidden" name="invoice_id" value="TEST123">
+      <input type="hidden" name="extra_name"  value="customer name">
+      <input type="hidden" name="extra_mobile" value="0249626071">    
+      <input type="hidden" name="extra_email"  value="">
+      <input type="hidden" name="total" value="1.00">
+      <input type="hidden" name="description"  value="Sample Order">
+      <button type="submit">Make Payment</button>
+  </form>
+</body>
+</html>
