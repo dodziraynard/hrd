@@ -7,6 +7,9 @@ import IntroContainer from "./IntroContainer";
 
 function smoothScroll(element, duration) {
   var target = document.querySelector(element);
+  if (target == null) {
+    window.location = "/";
+  }
   var targetPosition = target.getBoundingClientRect().top;
   var startPosition = window.pageYOffset;
   // var distance = targetPosition - startPosition;

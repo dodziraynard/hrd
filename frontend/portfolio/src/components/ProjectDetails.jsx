@@ -64,7 +64,7 @@ const ProjectLinks = styled("div")`
   }
 `;
 
-const Images = styled("imag")`
+const Images = styled("div")`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -99,7 +99,7 @@ const ProjectDetails = (props) => {
       <Body>
         <Images>
           {project?.images.map((image) => (
-            <a href={image.file}>
+            <a key={image.id} href={image.file}>
               <img src={image.file} alt="screenshots" />
             </a>
           ))}
